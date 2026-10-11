@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">绊</string>
+    <string name="title_activity_main">绊</string>
+    <string name="package_name">com.kizuna.app</string>
+    <string name="custom_url_scheme">com.kizuna.app</string>
+</resources>

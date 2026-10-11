@@ -1,0 +1,366 @@
+/* ==========================================================================
+   绊 / Kizuna — 全局设计系统 (CSS Variables)
+   ==========================================================================
+   v0.9.22-muji-calibrate (2026-08-21)：按 muji design.md 校准
+   修改这个文件里的色值，整个 App 的视觉风格跟着变。
+   */
+
+:root {
+  /* ─── 主色（文字/深色按钮）─── */
+  --kizuna-primary: #3c3c43;        /* muji: text primary 替代原 #2b2a26 */
+  --kizuna-primary-hover: #2a2a30;
+  --kizuna-primary-soft: #f4eede;   /* muji Kinari 替代原 #fff5dc（更柔和） */
+
+  /* ─── 强调色（半透明蓝，限使用）─── */
+  --kizuna-accent: #1565c0;
+  --kizuna-accent-soft: #e3f2fd;
+
+  /* ─── 状态色（7 状态机） ─── */
+  --kizuna-status-active: #2e7d32;
+  --kizuna-status-active-bg: #e8f5e9;
+  --kizuna-status-reserved: #5c4d2e;
+  --kizuna-status-reserved-bg: #f4eede;
+  --kizuna-status-shipped: #1565c0;
+  --kizuna-status-shipped-bg: #e3f2fd;
+  --kizuna-status-completed: #2e7d32;
+  --kizuna-status-completed-bg: #e8f5e9;
+  --kizuna-status-cancelled: #9d9da0;     /* muji gray 500 替代原 #a8a39a */
+  --kizuna-status-cancelled-bg: #f5f5f5;  /* muji bg secondary */
+  --kizuna-status-disputed: #dd0c14;      /* muji red 替代 #e65100，限警告用 */
+  --kizuna-status-disputed-bg: #fce8ea;
+  --kizuna-status-flagged: #c62828;
+  --kizuna-status-flagged-bg: #ffebee;
+
+  /* ─── 文字（muji gray scale）─── */
+  --kizuna-text: #3c3c43;        /* gray 800 */
+  --kizuna-text-soft: #6d6d72;   /* gray 700 */
+  --kizuna-text-faint: #9d9da0;  /* gray 500 */
+
+  /* ─── 边框 / 分割（muji）─── */
+  --kizuna-border: #ebebec;       /* border light */
+  --kizuna-border-strong: #d8d8d9; /* border */
+  --kizuna-divider: #f5f5f5;     /* bg secondary */
+
+  /* ─── 背景层级（muji）─── */
+  --kizuna-bg: #ffffff;          /* muji 纯白替代米色 */
+  --kizuna-bg-elevated: #ffffff;
+  --kizuna-bg-overlay: rgba(0, 0, 0, 0.5);  /* 略淡，muji 风格 */
+
+  /* ─── Kinari / Beige 区块背景（muji）─── */
+  --kizuna-kinari: #f4eede;
+  --kizuna-beige: #e0ceaa;
+
+  /* ─── 阴影（muji 2 级）─── */
+  --kizuna-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);   /* level 1 hover */
+  --kizuna-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);    /* level 2 dropdown */
+  --kizuna-shadow-lg: 0 2px 8px rgba(0, 0, 0, 0.1);    /* 别名→md，muji 不允许 3 级 */
+  --kizuna-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.08); /* 卡片默认扁平 */
+
+  /* ─── 圆角（muji 4px 上限）─── */
+  --kizuna-radius-sm: 4px;       /* muji 默认 */
+  --kizuna-radius-md: 4px;       /* muji 默认 */
+  --kizuna-radius-lg: 4px;       /* muji 卡片（不可大于 4px） */
+  --kizuna-radius-pill: 4px;     /* 替代 999px，限用于 chip 风格 */
+
+  /* ─── 字体（muji 优先 Helvetica Neue + Noto Sans JP）─── */
+  --kizuna-font-family: "Helvetica Neue", Arial, "Noto Sans JP", "Noto Sans JP Fallback",
+    "Hiragino Kaku Gothic ProN", "PingFang SC", "Microsoft YaHei", Meiryo, sans-serif;
+  --kizuna-font-mono: 'SF Mono', Menlo, Consolas, monospace;
+
+  /* ─── 字体 size 体系（muji）─── */
+  --kizuna-text-h1: 26px;
+  --kizuna-text-h2: 32px;
+  --kizuna-text-h3: 26px;        /* letter-spacing 2.4px 专用 */
+  --kizuna-text-body: 16px;      /* line-height 1.6 */
+  --kizuna-text-paragraph: 12px;
+  --kizuna-text-caption: 14px;
+  --kizuna-text-cta: 12px;        /* button */
+  --kizuna-text-nav: 16px;       /* nav link */
+  --kizuna-line-height: 1.6;
+  --kizuna-line-height-h3: 1.15;
+  --kizuna-letter-spacing-h3: 2.4px;
+
+  /* ─── 间距（muji 12 段）─── */
+  --kizuna-space-xxxxs: 4px;
+  --kizuna-space-xxxs: 8px;
+  --kizuna-space-xxs: 12px;
+  --kizuna-space-xs: 16px;
+  --kizuna-space-s: 20px;
+  --kizuna-space-sm: 24px;
+  --kizuna-space-md: 32px;
+  --kizuna-space-ml: 40px;
+  --kizuna-space-lg: 48px;
+  --kizuna-space-xl: 56px;
+  --kizuna-space-xxl: 64px;
+  --kizuna-space-xxxl: 80px;
+  --kizuna-space-xxxxl: 96px;
+
+  /* 旧别名（保持兼容，逐步迁移） */
+  --kizuna-space-xs-old: 4px;
+  --kizuna-space-sm-old: 8px;
+  --kizuna-space-md-old: 16px;
+  --kizuna-space-lg-old: 24px;
+
+  /* ─── 缓动（muji 平稳）─── */
+  --kizuna-ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --kizuna-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* ─── 安全区 ─── */
+  --kizuna-tabbar-height: 64px;
+  --kizuna-safe-bottom: env(safe-area-inset-bottom, 0px);
+
+  /* ─── 最小触控目标（muji 44×44）─── */
+  --kizuna-tap-min: 44px;
+}
+
+/* ==========================================================================
+   全局基础样式（muji line-height 1.6 / letter-spacing 禁用）
+   ========================================================================== */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--kizuna-font-family);
+  background: var(--kizuna-bg);
+  color: var(--kizuna-text);
+  font-size: var(--kizuna-text-body);
+  line-height: var(--kizuna-line-height);
+  letter-spacing: normal;        /* muji 禁用全局 letter-spacing */
+  word-break: break-all;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+  font-feature-settings: normal;  /* muji 不使用 palt */
+  font-kerning: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 700;
+  line-height: var(--kizuna-line-height);
+  letter-spacing: normal;
+}
+
+h1 { font-size: var(--kizuna-text-h1); }
+h2 { font-size: var(--kizuna-text-h2); }
+h3 {
+  font-size: var(--kizuna-text-h3);
+  line-height: var(--kizuna-line-height-h3);
+  letter-spacing: var(--kizuna-letter-spacing-h3);  /* h3 例外 */
+}
+
+p {
+  margin: 0 0 var(--kizuna-space-xs);
+  line-height: var(--kizuna-line-height);
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background: transparent;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  min-height: var(--kizuna-tap-min);     /* muji 触控 44 */
+  min-width: var(--kizuna-tap-min);
+}
+
+input, textarea {
+  border-radius: 0;                       /* muji input 0 圆角 */
+  border: 1px solid var(--kizuna-border-strong);
+  background: var(--kizuna-bg);
+  padding: 8px 12px;
+  font-size: var(--kizuna-text-body);
+}
+
+input:focus, textarea:focus {
+  border-color: var(--kizuna-primary);    /* muji focus 深色 */
+}
+
+a {
+  color: var(--kizuna-text);
+  text-decoration: none;
+}
+
+/* ==========================================================================
+   卡片（muji 扁平：1px border + 0 圆角 + 0 阴影）
+   ========================================================================== */
+
+.glass-card,
+.kz-card {
+  background: var(--kizuna-bg-elevated);
+  border: 1px solid var(--kizuna-border);
+  border-radius: var(--kizuna-radius-lg);
+  box-shadow: none;                       /* muji 扁平，无阴影 */
+  padding: var(--kizuna-space-xs);
+}
+
+.kz-card-hover:hover {
+  box-shadow: var(--kizuna-shadow-sm);   /* muji hover 1 级 */
+}
+
+/* ==========================================================================
+   按钮（muji Primary / Secondary / Brand 三种）
+   ========================================================================== */
+
+.kz-btn-primary {
+  background: var(--kizuna-primary);
+  color: #fff;
+  border-radius: 4px;                     /* muji 4px */
+  padding: 8px 16px;
+  font-size: var(--kizuna-text-cta);
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.18s var(--kizuna-ease);
+  min-height: var(--kizuna-tap-min);
+}
+
+.kz-btn-primary:hover:not(:disabled) {
+  opacity: 0.85;
+}
+
+.kz-btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.kz-btn-ghost {
+  background: transparent;
+  color: var(--kizuna-text);
+  border: 1px solid var(--kizuna-border-strong);
+  border-radius: 4px;                     /* muji 4px */
+  padding: 8px 16px;
+  font-size: var(--kizuna-text-cta);
+  font-weight: 700;
+  cursor: pointer;
+  min-height: var(--kizuna-tap-min);
+}
+
+.kz-btn-ghost:hover {
+  background: var(--kizuna-divider);
+}
+
+.kz-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  border-radius: 4px;                     /* muji 替代 999px */
+  font-size: var(--kizuna-text-paragraph);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   分割线
+   ========================================================================== */
+
+.kz-divider {
+  height: 1px;
+  background: var(--kizuna-divider);
+  margin: var(--kizuna-space-md) 0;
+}
+
+/* ==========================================================================
+   路由切换动画（muji 平稳 fade，无位移）
+   ========================================================================== */
+
+.route-fade-enter-active,
+.route-fade-leave-active,
+.kz-page-enter-active,
+.kz-page-leave-active {
+  transition: opacity 0.22s var(--kizuna-ease-out);
+}
+
+.route-fade-enter-from,
+.kz-page-enter-from {
+  opacity: 0;
+}
+
+.route-fade-leave-to,
+.kz-page-leave-to {
+  opacity: 0;
+}
+
+/* ==========================================================================
+   工具类
+   ========================================================================== */
+
+.kz-tap {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.kz-fade-in   { animation: kz-fade-in 0.4s var(--kizuna-ease-out) both; }
+
+/* ==========================================================================
+   动画关键帧（保留 muji 兼容：克制、不装饰）
+   ========================================================================== */
+
+@keyframes kz-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes kz-pulse {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.4; }
+}
+
+@keyframes kz-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.kz-pulse { animation: kz-pulse 1.5s ease-in-out infinite; }
+
+.kz-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--kizuna-divider) 0%,
+    var(--kizuna-border) 50%,
+    var(--kizuna-divider) 100%
+  );
+  background-size: 200% 100%;
+  animation: kz-shimmer 1.5s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   滚动条（隐藏但保持功能）
+   ========================================================================== */
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+/* ==========================================================================
+   移动端优化
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

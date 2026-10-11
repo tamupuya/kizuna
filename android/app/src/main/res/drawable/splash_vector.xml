@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+        android:width="1080dp"
+        android:height="1080dp"
+        android:viewportWidth="1080"
+        android:viewportHeight="1080">
+    <!-- 纯白背景 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0 L1080,0 L1080,1080 L0,1080 Z" />
+    <!-- 大写 K（得意黑风格，几何笔画） -->
+    <!-- 左竖主干 -->
+    <path
+        android:fillColor="#2b2a26"
+        android:pathData="M430,300 L520,300 L520,780 L430,780 Z" />
+    <!-- 右上斜 -->
+    <path
+        android:fillColor="#2b2a26"
+        android:pathData="M520,300 L700,300 L520,540 Z" />
+    <!-- 右下斜 -->
+    <path
+        android:fillColor="#2b2a26"
+        android:pathData="M520,540 L700,780 L520,780 Z" />
+</vector>

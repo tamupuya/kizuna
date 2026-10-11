@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="60" height="60">
+  <!-- 背景：深灰（与人设卡 C 圆占位一致） -->
+  <rect width="60" height="60" rx="30" ry="30" fill="#2b2a26" />
+  <!-- 猫耳左 -->
+  <path d="M 18 22 L 22 12 L 28 22 Z" fill="#fff5dc" />
+  <!-- 猫耳右 -->
+  <path d="M 42 22 L 38 12 L 32 22 Z" fill="#fff5dc" />
+  <!-- 猫脸 -->
+  <ellipse cx="30" cy="34" rx="14" ry="12" fill="#fff5dc" />
+  <!-- 左眼 -->
+  <ellipse cx="25" cy="32" rx="2" ry="3" fill="#2b2a26" />
+  <!-- 右眼 -->
+  <ellipse cx="35" cy="32" rx="2" ry="3" fill="#2b2a26" />
+  <!-- 鼻子 -->
+  <path d="M 28 36 L 30 38 L 32 36 Z" fill="#2b2a26" />
+  <!-- 嘴 -->
+  <path d="M 30 38 Q 28 41 26 40" stroke="#2b2a26" stroke-width="0.8" fill="none" stroke-linecap="round" />
+  <path d="M 30 38 Q 32 41 34 40" stroke="#2b2a26" stroke-width="0.8" fill="none" stroke-linecap="round" />
+</svg>

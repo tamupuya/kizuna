@@ -1,0 +1,60 @@
+# ===== 依赖 =====
+node_modules/
+
+# ===== 构建产物 =====
+dist/
+dist-ssr/
+*.local
+
+# ===== 环境变量（含密钥，绝不提交）=====
+.env
+.env.local
+.env.*.local
+
+# ===== 一次性探针/调试脚本（硬编码了真实 Supabase key）=====
+scripts/_probe-schema*.cjs
+scripts/_verify-fix.cjs
+scripts/_probe-*.cjs
+scripts/_find-*.cjs
+scripts/_fix-*.cjs
+scripts/_*.cjs
+
+# ===== 历史归档脚本（一次性，不提交）=====
+scripts/_archive/
+scripts/__pycache__/
+
+# ===== 历史遗留含硬编码密钥 =====
+_legacy/services/admin.ts
+
+# ===== 历史遗留死代码（含 admin 后台密钥机制，不开源）=====
+_legacy/
+
+# ===== Android 构建产物 =====
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+android/app/release/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# ===== 求职/隐私材料（不开源，留本地或私有仓库）=====
+# 用通配符避免真名出现在公开的 .gitignore 文本里
+docs/Kizuna-项目档案.md
+docs/产品复盘*.md
+docs/简历*.md
+docs/求职*.md
+docs/自我认知*.md
+docs/用户画像*.md
+求职追踪表.xlsx
+接力说明.md
+AI协作交流协议.md
+
+# ===== 编辑器/系统 =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.log

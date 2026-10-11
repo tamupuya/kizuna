@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2b2a26</color>
+    <color name="colorPrimaryDark">#1a1916</color>
+    <color name="colorAccent">#d4af6f</color>
+    <!-- 品牌米黄底（splash + status bar 用） -->
+    <color name="splash_bg">#fafaf8</color>
+    <color name="brand_warm_soft">#fff5dc</color>
+</resources>
